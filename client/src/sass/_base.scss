@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@200;300&family=Arsenal&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap");
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --woocommerce: #a46497;
+  --wc-green: #7ad03a;
+  --wc-red: #a00;
+  --wc-orange: #ffba00;
+  --wc-blue: #2ea2cc;
+  --wc-primary: #a46497;
+  --wc-primary-text: white;
+  --wc-secondary: #ebe9eb;
+  --wc-secondary-text: #515151;
+  --wc-highlight: #77a464;
+  --wc-highligh-text: white;
+  --wc-content-bg: #fff;
+  --wc-subtext: #767676;
+  --main-color: #efe4dc;
+}
+body {
+  font-family: Arsenal, sans-serif;
+  background-color: var(--main-color);
+  font-size: 19px;
+  font-weight: 300;
+  color: #000;
+  overflow-x: hidden;
+}
+.main {
+  background-color: var(--main-color);
+  overflow: hidden;
+}
+html {
+  font-size: 100% !important;
+  @include tablet {
+    font-size: 80% !important;
+  }
+  @include mobile {
+    font-size: 70% !important;
+  }
+}
+:focus {
+  outline: 0;
+}
+a,
+ul,
+li,
+ol {
+  text-decoration: none;
+  list-style-type: none;
+}
+a {
+  cursor: pointer;
+}
+a,
+p {
+  transition: color 0.2s ease-out;
+}
+button,
+i {
+  cursor: pointer;
+}
+button:hover {
+  color: #767676;
+}
+h1 {
+  font-family: Arsenal, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: #000;
+  font-size: 60px;
+  line-height: 1.13em;
+  margin: 25px 0;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+h2 {
+  font-family: Arsenal, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #000;
+  font-size: 45px;
+  line-height: 1.2em;
+  margin: 25px 0;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+h4 {
+  font-family: Arsenal, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #000;
+  font-size: 21px;
+  line-height: 1.19em;
+  margin: 25px 0;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+h6 {
+  font-weight: 400;
+  color: #000;
+  font-family: Jost, sans-serif;
+  font-size: 13px;
+  line-height: 2em;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin: 25px 0;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+.elementor-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.elementor-section {
+  position: relative;
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+  @include mobile {
+    max-width: 100%;
+  }
+}
+
+@each $color, $val in $colors {
+  .color-#{$color} {
+    color: $val;
+  }
+
+  .bg-#{$color} {
+    background-color: $val;
+  }
+}
+
+@each $val in $numbers {
+  .grid-col-#{$val} {
+    grid-template-columns: repeat($val, 1fr);
+  }
+}
+@each $val in $numbers {
+  .grid-col-md-#{$val} {
+    @include tablet {
+      grid-template-columns: repeat($val, 1fr);
+    }
+  }
+}
+@each $val in $numbers {
+  .grid-col-sm-#{$val} {
+    @include mobile {
+      grid-template-columns: repeat($val, 1fr);
+    }
+  }
+}
+.grid {
+  display: grid;
+}
+
+@media only screen and (min-width: 1441px) {
+  .elementor-container {
+    width: 1300px;
+    max-width: 1300px;
+  }
+}

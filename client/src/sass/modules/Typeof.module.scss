@@ -1,0 +1,21 @@
+.item {
+  text-align: center;
+  margin: 0 15px;
+  &-icon {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+  }
+  &-context {
+    position: relative;
+    width: 100%;
+    vertical-align: top;
+    &__title {
+      margin: 21px 0 0 0;
+    }
+    &__desc {
+      margin: 15px 0 0;
+      letter-spacing: 0.05rem;
+    }
+  }
+}

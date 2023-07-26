@@ -1,0 +1,53 @@
+.elementor-wiget-populated {
+  padding: 0px 25px 0px 0px;
+}
+.overide {
+  padding: 130px 0px 0px 25px;
+}
+.category-image {
+  overflow: hidden;
+  &:hover .category-image-inner > h1::before {
+    width: 100%;
+  }
+  &:hover img {
+    transform: scale(1);
+  }
+  img {
+    display: block;
+    transform: scale(1.03);
+    transition: transform 0.88s cubic-bezier(0.215, 0.61, 0.355, 1);
+    will-change: transform;
+  }
+  &-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+    padding: 21px 40px;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.2s ease-out;
+    &__title {
+      color: #fff;
+      margin: 0;
+      position: relative;
+      a {
+        color: inherit;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        background: #fff;
+        bottom: 6px;
+        transition: width 0.48s cubic-bezier(0.77, 0, 0.175, 1);
+      }
+    }
+  }
+}

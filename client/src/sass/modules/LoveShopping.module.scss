@@ -1,0 +1,20 @@
+.item-subtitle {
+  margin: 0;
+  line-height: 1.8em;
+  font-weight: 600;
+}
+.item-title {
+  margin: 0;
+}
+.item-more {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  a {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 2em;
+    letter-spacing: 0.35em;
+    border-bottom: 1px solid #111;
+  }
+}

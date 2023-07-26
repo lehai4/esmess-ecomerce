@@ -1,0 +1,105 @@
+$white-color: #fff;
+$hover-txt: #1e4c88;
+$hover-white: #fff;
+$txt-color: #111;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+////////////////////////////////
+#header-emees-page {
+  position: relative;
+  // display: inline-block;
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  z-index: 100;
+}
+#header-emees-page {
+  background-color: rgba(255, 255, 255, 0);
+}
+// Inner
+.header-emees-page-inner {
+  height: 100%;
+}
+.header-emees-page-inner-disabled {
+  display: none;
+}
+
+.header__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &__main {
+    height: 46px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+}
+.header__menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 28px;
+  &__left {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &__navigation {
+      margin: 0 20px 0 0;
+      &__item__text {
+        position: relative;
+      }
+    }
+  }
+  &__right {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    &__navigation {
+      margin: 0 20px 0 0;
+      &__item__text {
+        position: relative;
+      }
+    }
+  }
+}
+
+.top-13-override {
+  top: 3.28rem;
+}
+
+.box-hover > div > a {
+  color: #fff !important;
+}
+////////////////////////////////
+.header-emees-page-sticky {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  background-color: #fff;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease, top 0.5s ease;
+  z-index: 100;
+}
+.header-emees-page-sticky-sticky {
+  transform: translateY(0) !important;
+  a {
+    color: #111;
+  }
+  & span::before {
+    background-color: #111;
+  }
+}

@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+//
+.product-additional > div > div::after {
+  height: 1px;
+  position: absolute;
+  background: black;
+  content: "";
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  transition: width 0.3s;
+}
